@@ -1,0 +1,68 @@
+{
+    "module": {
+	"category": "Textfunktionen",
+	"context": "fully",
+	"id": "14582",
+	"name": "fully",
+	"version": "0.9.0",
+	"inputs": [
+	    {
+		"label": "Hostname",
+		"identifier": "server_name",
+		"init_value": "",
+		"type": "string"
+	    },
+	    {
+		"label": "Port",
+		"identifier": "port",
+		"init_value": 2323,
+		"type": "number"
+	    },
+	    {
+		"label": "Password",
+		"identifier": "password",
+		"init_value": "",
+		"type": "string"
+	    },
+	    {
+		"label": "SSL",
+		"identifier": "ssl",
+		"init_value": 0,
+		"type": "number"
+	    },
+	    {
+		"label": "On",
+		"identifier": "on",
+		"init_value": 0,
+		"type": "number"
+	    },
+	    {
+		"label": "Brightness",
+		"identifier": "brightness",
+		"init_value": 0,
+		"type": "number"
+	    }
+	],
+	"outputs": [
+	    {
+		"label": "Ok",
+		"identifier": "ok",
+		"init_value": "0",
+		"type": "number"
+	    },
+	    {
+		"label": "Response",
+		"identifier": "msg",
+		"init_value": "",
+		"type": "string"
+	    }
+	],
+	"stores": [],
+	"timers": [],
+	"scripts": [
+	    {
+		"filename": "hsl3_14582_fully.py"
+	    }
+	]
+    }
+}
