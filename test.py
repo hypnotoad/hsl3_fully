@@ -19,7 +19,8 @@ class ModuleTest(unittest.TestCase):
                       "password": config["password"].encode('utf-8'),
                       "ssl": 1,
                       "on": 0,
-                      "brightness": 0
+                      "brightness": 0,
+                      "restart_app": 0
                       }
 
     def create_module(self):
@@ -34,6 +35,14 @@ class ModuleTest(unittest.TestCase):
         module = self.create_module()
         inputs["on"].value = 1
         inputs["on"].changed = True
+        module.on_calc(inputs)
+        self.assertEqual(self.fw.get_output("ok"), True)
+
+    def test_restart_app(self):
+        inputs=Hsl3Slots(self.input)
+        module = self.create_module()
+        inputs["restart_app"].value = 1
+        inputs["restart_app"].changed = True
         module.on_calc(inputs)
         self.assertEqual(self.fw.get_output("ok"), True)
         

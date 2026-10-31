@@ -16,11 +16,16 @@ class LogicModule:
         self.port = int(inputs["port"].value)
         self.protocol = 'https' if inputs["ssl"].value else 'http'
         
+        if inputs["restart_app"].changed and inputs["restart_app"].value != 0:
+            self.restartApp()
         if inputs["on"].changed:
             self.screenOn(inputs["on"].value != 0)
         if inputs["brightness"].changed:
             self.brightness(inputs["brightness"].value)
 
+    def restartApp(self):
+        self.sendCmd('restartApp')
+        
     def screenOn(self, on):
         if (on):
             self.sendCmd('screenOn')

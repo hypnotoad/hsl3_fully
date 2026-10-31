@@ -4,7 +4,7 @@
 	"context": "fully",
 	"id": "14582",
 	"name": "fully",
-	"version": "0.9.0",
+	"version": "1.0.0",
 	"inputs": [
 	    {
 		"label": "Hostname",
@@ -41,7 +41,13 @@
 		"identifier": "brightness",
 		"init_value": 0,
 		"type": "number"
-	    }
+	    },
+	    {
+		"label": "Restart App",
+		"identifier": "restart_app",
+		"init_value": 0,
+		"type": "number"
+	    }	    
 	],
 	"outputs": [
 	    {
