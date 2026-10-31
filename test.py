@@ -20,7 +20,8 @@ class ModuleTest(unittest.TestCase):
                       "ssl": 1,
                       "on": 0,
                       "brightness": 0,
-                      "restart_app": 0
+                      "restart_app": 0,
+                      "restart_device": 0
                       }
 
     def create_module(self):

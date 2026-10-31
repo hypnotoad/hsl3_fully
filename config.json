@@ -47,6 +47,12 @@
 		"identifier": "restart_app",
 		"init_value": 0,
 		"type": "number"
+	    },
+	    {
+		"label": "Restart Device",
+		"identifier": "restart_device",
+		"init_value": 0,
+		"type": "number"
 	    }	    
 	],
 	"outputs": [

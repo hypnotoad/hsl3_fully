@@ -18,6 +18,8 @@ class LogicModule:
         
         if inputs["restart_app"].changed and inputs["restart_app"].value != 0:
             self.restartApp()
+        if inputs["restart_device"].changed and inputs["restart_device"].value != 0:
+            self.restartDevice()
         if inputs["on"].changed:
             self.screenOn(inputs["on"].value != 0)
         if inputs["brightness"].changed:
@@ -25,6 +27,9 @@ class LogicModule:
 
     def restartApp(self):
         self.sendCmd('restartApp')
+
+    def restartDevice(self):
+        self.sendCmd('rebootDevice')
         
     def screenOn(self, on):
         if (on):
